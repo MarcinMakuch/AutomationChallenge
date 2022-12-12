@@ -38,6 +38,7 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,7 +98,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="592,1086" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1012,1845" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_DataExcel" />
     </Sequence.Variables>
@@ -106,27 +107,55 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="530,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="data" WorkbookPath="challenge.xlsx" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: The Automation Challenge" sap:VirtualizedContainerService.HintSize="530,827" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2c258506-34d1-4c8a-9a36-0f69fc9c261c" Version="V2">
+    <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="950,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="data" WorkbookPath="challenge.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: The Automation Challenge" sap:VirtualizedContainerService.HintSize="950,1586" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2c258506-34d1-4c8a-9a36-0f69fc9c261c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Data Entering Sequence" sap:VirtualizedContainerService.HintSize="496,601" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Data Entering Sequence" sap:VirtualizedContainerService.HintSize="916,1360" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DataExcel]" DisplayName="For Each Row in dt_DataExcel" sap:VirtualizedContainerService.HintSize="434,477" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <uix:NCheckState DisplayName="Check App State 'Start'" sap:VirtualizedContainerService.HintSize="854,515" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2c258506-34d1-4c8a-9a36-0f69fc9c261c" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,289" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c258506-34d1-4c8a-9a36-0f69fc9c261c" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.theautomationchallenge.com/" DesignTimeRectangle="48, 619, 336, 45" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Start'" FullSelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' type='' class='bubble-element Button clickable-element' check:innerText='Start' /&gt;" Guid="45d2f45d-2b9b-40fa-ae39-4ed1e897e0c3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVQAAAAxCAYAAACF3FHoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANUSURBVHhe7du9SxthHMBx8QUEwf8io4OD/0Kn4OTaSSgO4iK4dOvg0MGhg4OC0C6CIE4VLBIMHURKKSeCh0gTcYgibUIHTxH59XnuxTzJXSKR39kXvg984PI8z9345e6S9JkhAAAVmZMAgN61TgyN98vIzKCMLg7J6FsAQAvTRttI28r2fhrND8PFgewLAABSbDPdhhrRga1t1gkAgM7a7lSjg/AxP2MzAKAz285UUHlnCgBPYNqZDmrWRgDAowgqACghqACghKACgBKCCgBKCCoAKCGoAKCEoAKAEoIKAEoIKgAoIagAoISgAoASgopcjX1aF+9XIMkIro9l52Aycy/wryOoyM/qknh3cUnvAwnu42OpS3mv0Lq3VJKGXbopyWt3Xkve1wcMgor8eMc2YSKNLZkK5ybkzXk9mrtaa91LUPEfIKjIz2F7UI3dbanemrvV2nJzXxI7Z/iH8VpoUt6dVaSR3OHe1cU/mpOxh3VrTfxwsSb+VfSKoVGZi9YevT6gg6AiPxsmcskj/21NvJNFmf2Qsc9GNtlnRmCC631rrs+e1uKVaC0+Eu+L+9ogCWo0wmt48doj1we0EFTkyn4p5d/EJQtHINWzpeYda6LLI/ns/rpsfN+X8tfoy6ypkyiwjbMFZ18SVBPLgwlnPsYjP54BQcUzKEhxb03KP+L3p2ZcnL5q3dMteJtLUm40z01GdlCP5b17boKg4hkQVORm2q+Ej9dV/+XD3NRRJcyeXJdk3tnbOXgFWbkMzwiHvV4QP74TVPxtCCpyM528+2xsyfRqNPcQVDNXdPd3DN6ClMNXBoEcfLafCzJf6fbIT1Dx5xBU5GfTRM79Msg5rvptP+7/uC0X8ZrcVWRnN1l7IRs/43n7W1bnGj0FteP1AT0EFbmK/inlvP/M/MmTNSkrtWRfXcolZ21zWbzreMnG8Dy6y+0pqN2uDyghqACghKACgBKCCgBKCCoAKCGoAKCEoAKAEoIKAEoIKgAoIagAoISgAoASggoASggqAChJB3UxeyMAoAvTzlRQR2YGszcDADqy7UwFdWi8P3MzAKAz285UUK3h4kDmCQCANNtMt6FGy4ewtuHjP+9UASDNtNE2su3ONJGaAAA8TeYkAKAnffIbUF69ZX0XEEYAAAAASUVORK5CYII=" InformativeScreenshot="b324aebc435b2f49b6b06e5fb0462b2c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,114" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.theautomationchallenge.com/" DesignTimeRectangle="48, 619, 336, 45" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Start'" FullSelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' type='' class='bubble-element Button clickable-element' check:innerText='Start' /&gt;" Guid="0caa1392-80ff-424a-8b9d-1bf4ab47e643" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVQAAAAxCAYAAACF3FHoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANUSURBVHhe7du9SxthHMBx8QUEwf8io4OD/0Kn4OTaSSgO4iK4dOvg0MGhg4OC0C6CIE4VLBIMHURKKSeCh0gTcYgibUIHTxH59XnuxTzJXSKR39kXvg984PI8z9345e6S9JkhAAAVmZMAgN61TgyN98vIzKCMLg7J6FsAQAvTRttI28r2fhrND8PFgewLAABSbDPdhhrRga1t1gkAgM7a7lSjg/AxP2MzAKAz285UUHlnCgBPYNqZDmrWRgDAowgqACghqACghKACgBKCCgBKCCoAKCGoAKCEoAKAEoIKAEoIKgAoIagAoISgAoASgopcjX1aF+9XIMkIro9l52Aycy/wryOoyM/qknh3cUnvAwnu42OpS3mv0Lq3VJKGXbopyWt3Xkve1wcMgor8eMc2YSKNLZkK5ybkzXk9mrtaa91LUPEfIKjIz2F7UI3dbanemrvV2nJzXxI7Z/iH8VpoUt6dVaSR3OHe1cU/mpOxh3VrTfxwsSb+VfSKoVGZi9YevT6gg6AiPxsmcskj/21NvJNFmf2Qsc9GNtlnRmCC631rrs+e1uKVaC0+Eu+L+9ogCWo0wmt48doj1we0EFTkyn4p5d/EJQtHINWzpeYda6LLI/ns/rpsfN+X8tfoy6ypkyiwjbMFZ18SVBPLgwlnPsYjP54BQcUzKEhxb03KP+L3p2ZcnL5q3dMteJtLUm40z01GdlCP5b17boKg4hkQVORm2q+Ej9dV/+XD3NRRJcyeXJdk3tnbOXgFWbkMzwiHvV4QP74TVPxtCCpyM528+2xsyfRqNPcQVDNXdPd3DN6ClMNXBoEcfLafCzJf6fbIT1Dx5xBU5GfTRM79Msg5rvptP+7/uC0X8ZrcVWRnN1l7IRs/43n7W1bnGj0FteP1AT0EFbmK/inlvP/M/MmTNSkrtWRfXcolZ21zWbzreMnG8Dy6y+0pqN2uDyghqACghKACgBKCCgBKCCoAKCGoAKCEoAKAEoIKAEoIKgAoIagAoISgAoASggoASggqAChJB3UxeyMAoAvTzlRQR2YGszcDADqy7UwFdWi8P3MzAKAz285UUK3h4kDmCQCANNtMt6FGy4ewtuHjP+9UASDNtNE2su3ONJGaAAA8TeYkAKAnffIbUF69ZX0XEEYAAAAASUVORK5CYII=" InformativeScreenshot="1bfedc54a96416326bf2c5265e19c146.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DataExcel]" DisplayName="For Each Row in dt_DataExcel" sap:VirtualizedContainerService.HintSize="854,683" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Entering Data in to Web fields" sap:VirtualizedContainerService.HintSize="400,351" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Entering Data in to Web fields" sap:VirtualizedContainerService.HintSize="400,557" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,6 +172,11 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c258506-34d1-4c8a-9a36-0f69fc9c261c" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.theautomationchallenge.com/" DesignTimeRectangle="1204, 283, 163, 50" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='' class='bubble-element Button clickable-element' check:innerText='Submit' /&gt;" Guid="b156d9f4-d7e3-4f28-aa13-e7d7c8855929" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAA2CAYAAACiLIkKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ6SURBVHhe7Z1BSxtBFMf3ywj9Gpb23HvBQyGXHlvopYXioSDtoRQKgodSKD0UDz1IRXtKbEGxiJ4CQYMotkQUSeJ210STvM5/s7OZ6GoRG33N/gd+uDv7Jgbyy5t5k8N4YRhKEATi+75Uq1WpVCqytbUl5XJZNjY2ZH19nZCBAL/gGXyDd/APHsJHeOlZMff396PAlZUVyefzMj8/L7Ozs4QMFHgG3+Ad/IOHVlDPilkqlWRhYUG+vXwuxft3ZOfuLfl1e4SQgQLP4Bu8g3/w0ArqIZXCWDz48ehB6gsQch3AP3gIH+Glh7keKRXmpg0g5DqBh/ARXnpYjBYKhSi1pgUTcp3AQ/gILz2kUCxKucYkGoCH8BFeeijnUTWlBRJyE8BHeOlhv4lyEk3AR3hJOYk6KCdRC+UkaqGcRC2Uk6iFchK1UE6iFspJ1EI5iVooJ1EL5SRqoZxELRmSMyf+clnaLem2Vl3apRmpjaXF/o1xadTwInVpTKY9vyoT3ddv7cjRRNrzbJAZOauLe7Apap2wEV+Z6+1pOUiJvxgjj4/Rg5IzJ8FmXTq1VfGfuP2D/r+6yIicNtM1pPlhNOrbfTEjrSiLmg/6bdqYi7gpSSjnEGI/1J6c4HepYbKomTpdOefKCBQxGbXbNy0nuPeXpG5jHElaGzvSwWWrIa3l17KXxIDe9H9SLEsnXlK0Sx+l9rmYLDE6m6eztyNh8t5sn9OS9zicZETOEamv1ONP1MixvSTB1JjspsRdTs64NeO/pp3MjcUxZ+M6TlzU+sb1vjR9ciYZclyOKr3liDTNF8tI3hszfGRGzqggWouznG1+WcI3rhSGS8rZKU4ayUelvhbL/3PGkb4X1yrkzH1OjuKlrx3nm+yN1l6biMe4405P3+f1DycZkjPm4VM5/G6mVJu1mkXx3Yr9knKezMV9U0vSRsc507+VKdjGfW+clZpyniUjcr6Tpm+mQd9Uv7ZvzBHsixNLOdWQGTmPo+KjIcef7nX7EjlRJDmxVs69r90i5f1qdylwpWl9AHJOuf3DSUbkdORBQzFhN+PDVTl0p/VXhW4GRHPjzpEzaklh0zBZOK0g+ldyPpajgyi8uzuwOO48Gz4yIieIfyFyKuR2ZUn8Z6fjRqVWcLd9zPoUF31ypmwRRbJMOFmzPy6RcxP3l5Dz1B7sgbMF1T9m+MiQnOR/g3IStVBOohbKSdRCOYlaKCdRC+UkaqGcRC2Uk6iFchK1UE6iFspJ1EI5iVooJ1FLIiePeiHagI/RUS88JItoou+QLB4vSDTRd7wgD2Ylmug7mJVHWhMtnDnSGoeu4/B1HMKOBzAXqZVrUHIdwDP4Bu/gHzyEj/DSC4IgukAHjEVKzefz0aIUVRMhgwSewTd4B/+smPDSC8MwukAHUinmeixGEYhyHvtNhAwC+AXP4Bu8g39WzDAM5Q/gokBeZWSwtAAAAABJRU5ErkJggg==" InformativeScreenshot="6adf0489e9e0264ccc1c0723d1a6eee6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
