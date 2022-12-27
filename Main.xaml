@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1037,1031" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1037,1519" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -100,7 +100,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="496,966" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="592,1454" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CompanyData" />
       <Variable x:TypeArguments="x:String" Name="StringDT" />
@@ -110,7 +110,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="530,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
@@ -156,7 +156,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:OutputDataTable DataTable="[dt_CompanyData]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[StringDT]">
+    <ui:OutputDataTable DataTable="[dt_CompanyData]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="530,52" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[StringDT]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -164,19 +164,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OutputDataTable>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Browser Starting" sap:VirtualizedContainerService.HintSize="434,671" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="b511f3ed-f568-475f-9e0a-9ab961cad33b" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Browser Starting" sap:VirtualizedContainerService.HintSize="530,1159" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="b511f3ed-f568-475f-9e0a-9ab961cad33b" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Automatyzacja" sap:VirtualizedContainerService.HintSize="400,454" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Automatyzacja" sap:VirtualizedContainerService.HintSize="496,942" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Window maximize" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="b511f3ed-f568-475f-9e0a-9ab961cad33b" Shortcuts="[d(hk)][d(ctrl)]0[u(ctrl)][u(hk)]" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Window maximize" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="b511f3ed-f568-475f-9e0a-9ab961cad33b" Shortcuts="[d(hk)][d(ctrl)]0[u(ctrl)][u(hk)]" Version="V3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -184,7 +184,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NKeyboardShortcuts>
-            <uix:NNavigateBrowser Action="Refresh" DisplayName="Browser Refresh" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3">
+            <uix:NNavigateBrowser Action="Refresh" DisplayName="Browser Refresh" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -192,11 +192,38 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NNavigateBrowser>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b511f3ed-f568-475f-9e0a-9ab961cad33b" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Challenge Starting" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b511f3ed-f568-475f-9e0a-9ab961cad33b" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.theautomationchallenge.com/" DesignTimeRectangle="48, 619, 336, 45" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Start'" FullSelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' type='' class='bubble-element Button clickable-element' check:innerText='Start' /&gt;" Guid="7ad1d936-7ca5-4060-bc8a-3db22dfe8b6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVQAAAAxCAYAAACF3FHoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANUSURBVHhe7du9SxthHMBx8QUEwf8io4OD/0Kn4OTaSSgO4iK4dOvg0MGhg4OC0C6CIE4VLBIMHURKKSeCh0gTcYgibUIHTxH59XnuxTzJXSKR39kXvg984PI8z9345e6S9JkhAAAVmZMAgN61TgyN98vIzKCMLg7J6FsAQAvTRttI28r2fhrND8PFgewLAABSbDPdhhrRga1t1gkAgM7a7lSjg/AxP2MzAKAz285UUHlnCgBPYNqZDmrWRgDAowgqACghqACghKACgBKCCgBKCCoAKCGoAKCEoAKAEoIKAEoIKgAoIagAoISgAoASgopcjX1aF+9XIMkIro9l52Aycy/wryOoyM/qknh3cUnvAwnu42OpS3mv0Lq3VJKGXbopyWt3Xkve1wcMgor8eMc2YSKNLZkK5ybkzXk9mrtaa91LUPEfIKjIz2F7UI3dbanemrvV2nJzXxI7Z/iH8VpoUt6dVaSR3OHe1cU/mpOxh3VrTfxwsSb+VfSKoVGZi9YevT6gg6AiPxsmcskj/21NvJNFmf2Qsc9GNtlnRmCC631rrs+e1uKVaC0+Eu+L+9ogCWo0wmt48doj1we0EFTkyn4p5d/EJQtHINWzpeYda6LLI/ns/rpsfN+X8tfoy6ypkyiwjbMFZ18SVBPLgwlnPsYjP54BQcUzKEhxb03KP+L3p2ZcnL5q3dMteJtLUm40z01GdlCP5b17boKg4hkQVORm2q+Ej9dV/+XD3NRRJcyeXJdk3tnbOXgFWbkMzwiHvV4QP74TVPxtCCpyM528+2xsyfRqNPcQVDNXdPd3DN6ClMNXBoEcfLafCzJf6fbIT1Dx5xBU5GfTRM79Msg5rvptP+7/uC0X8ZrcVWRnN1l7IRs/43n7W1bnGj0FteP1AT0EFbmK/inlvP/M/MmTNSkrtWRfXcolZ21zWbzreMnG8Dy6y+0pqN2uDyghqACghKACgBKCCgBKCCoAKCGoAKCEoAKAEoIKAEoIKgAoIagAoISgAoASggoASggqAChJB3UxeyMAoAvTzlRQR2YGszcDADqy7UwFdWi8P3MzAKAz285UUK3h4kDmCQCANNtMt6FGy4ewtuHjP+9UASDNtNE2su3ONJGaAAA8TeYkAKAnffIbUF69ZX0XEEYAAAAASUVORK5CYII=" InformativeScreenshot="b324aebc435b2f49b6b06e5fb0462b2c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CompanyData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,448" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,331" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Company Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="b511f3ed-f568-475f-9e0a-9ab961cad33b" Text="[CurrentRow(&quot;company_name&quot;).ToString]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.theautomationchallenge.com/" DesignTimeRectangle="994, 231, 173, 41" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='input' class='bubble-element Input a1672149823661x2070' aaname='' /&gt;" Guid="788fdf06-b950-45ff-a88e-9c557703be2f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALEAAAAtCAYAAADhjYr9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVHhe7d2xisJAAEXR/f9v1CaF2qSNjTLLE5S42fR5cA68LuVlmCrzsyzLMGueiK1+m4jneR7TNI3z+TxOp5PZIZYe02X6/NvsV8S3221cr9dxv9/H8/kccBTpMV1eLpdXp+tuPxGn8HwAR5dO1yfyJ+Ic1Skdji6dptdNxLlzuELQIJ2m103EuTxDi/QqYqqJmHoipp6IqSdi6omYeiKmnoipJ2LqiZh6IqaeiKknYuqJmHoipp6IqSdi6omYeiKmnoipJ2LqiZh6IqaeiKknYuqJmHoipp6IqSdi6omYev9G7P/EtNj9P7E/xdNi90/x3uygxe6bHVlepckHKd3VgiN5PB6vLtPn7utJ76XwHNW5c+TybHaEpcd0uT6B39tEbNY2EVv5lvEL/Ez2XzlwcjMAAAAASUVORK5CYII=" InformativeScreenshot="ec6458e13f0c3b10e2ba7778404fe1c7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="992, 197, 174, 26" ElementType="Text" FriendlyName="'Company Name'" FullSelectorArgument="&lt;webctrl aaname='Company Name' class='content' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Company Name' class='content' tag='DIV' type='' check:innerText='Company Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK4AAAAaCAYAAAAuV2eNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR8SURBVHhe7ZnBa9tIFIf3/9JJYDAYDMG6WKdQiOmhJxGoKSSXJQeLwBofzEJxoLgQfIgJFC8sLhRBwYfgQJCheC9eAoKAICAw+Prb9yRZHslqLXtZUq3m8IE1M5oZzXyaeSP/slqtIJHkDSmuJJdIcSW5RIorySVSXEkukeJKcokUV5JLpLiSXLIlrjsbwnxdhaooUJQy9Lc9TB7jZYrCtKNAbVnwtvKmaCsGhgUdl5+BmLjefRd6pYnBgxukLT0svrRxXDEwKuAksbiKoqE98RJ5UtyXRhDXg9VS0PwjlFbAfq/h+Hq+lf5/h8V9c3YOvd7F1BPzpLgvjSCug6GhoH0XL8B4sxH6lrNJWzqYvG/S6swrkorqKYUTjnDP4xBGyUTvw7pMGY3WGIvlAlbHQLVEaaUqjA+2sA2H7d+MYZ6U6R4F5XoT/Yf4asc7QLMe5KtHDZi380QdKsxrCnfWdZyYGH4L63gaoUn9mogSLm30aukSsrgG1T/9XYd+ZQt52+Jm6tdVPyrD/Rr/HdxnHKmUxuPYh/28qTMY53C8OP+18CwFJ5O4cbxgIi8tOMsgzfliQheFYHFpizU/h7K7NvpUt16/QH8WruiPJGiNJvPreiKC9pUaTWgohDsb0AsgCPLQgybkr7w5BixEog71dIh52Bfnswkt6puL0TuxPMF1vhvBXV8LBOLSMzxP0K41MPhrnZcQN2O/NHp5/TFburA/GlDqOi4+2nD9NAfjlgb1chIKT+Pc0WFch/mU5t710Ei+eAVlf3GXNIlKE6MnMT0IM0wrnChf3DamUT4N+p/nUM7GMUHsKy0Qw78O2n9zs4jymWlHhfEpLEMxtyuuSIRza0CLVsO0ZyCJXmnozYJr7sdGjiAMSguPmEhc+u1ZJlRjSLsG5yXEPaRf7hjnyjnGrpA2oxeA2nD4tz/ObUxCaQNcjM9UdO/FtGKyv7gpUjLiJKeWuWtD6Uw31wRPblLcZPtcJrqPV6pbEw1/a+XtMySqN62ORJpnwYxWLQ4Tki/hhtgz+dKUw5coKe4h/eI6EmPE47YW1x9DoS6BnXNUAPaPcV9QXP6tng5gC6LFxM4iLu0Ok8tysI3zCpfYBUTi4hKPIxgVWiWf4uIe1q8d4jrUVso4SwIEcTN+VTgwVMgqbjxUCOoN0njFo8mfbO5n5tfHe4pLL+JXE2W6h0OVqM8pbIlLLG5I0paJi0jcQ/u1Q1zK75ZSdoNY6FBcBHGzfsf9zuGsRpMQO5wdJm7scHZPhxFhZWPRtN+szWHlgQ9vdM+e4q6WJE2FnoHasn5w0EkTd7WkmPmEt+x/269d4nK91MdfR9FB0z+sVi5giXFxQYmJy2T65yzT57DuQeJufQ67F3aA5zmGrQbK3LdSFY3WEBafzmOCJA8vadKwlGrskJZGqrgMhRi6GOMe1K/d4m59DjttYyQ/h/lsiftypAv238AhSOKzmCRXFFJcPwSp92DLeDG3FEzcoA31yNj6R06SL34icSWS7EhxJblEiivJJVJcSQ5Z4R9SzGB2zW1GegAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
